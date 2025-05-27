@@ -93,6 +93,14 @@ jobs:
           publish_branch: output
           
           force_orphan: true 
+          
           # Optionally, you can set a custom commit message
 
           commit_message: "Update snake animation [skip ci]"
+
+      - name: Setup Git Remote
+        run: |
+          if git remote | grep origin; then
+            git remote rm origin
+          fi
+          git remote add origin https://github.com/${{ github.repository }}.git
