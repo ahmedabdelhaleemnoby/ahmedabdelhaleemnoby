@@ -10,7 +10,6 @@
 [![Twitter Badge](https://img.shields.io/badge/-@pop_abdelhaleem-1ca0f1?style=flat&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/pop_abdelhaleem)](https://twitter.com/pop_abdelhaleem) 
 [![Linkedin Badge](https://img.shields.io/badge/-@ahmedabdelhaleemnoby-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/ahmed-abdelhaleem-gamal/)](https://www.linkedin.com/in/ahmed-abdelhaleem-gamal/)
 
-![snake gif](https://github.com/YOUR_USERNAME/YOUR_USERNAME/blob/output/github-snake-dark.svg)
 
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/suren-atoyan/suren-atoyan/output/github-contribution-grid-snake-dark.svg">
@@ -37,3 +36,5 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+![snake gif](https://github.com/ahmedabdelhaleemnoby/ahmedabdelhaleemnoby/blob/output/github-snake-dark.svg)
+
