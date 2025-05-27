@@ -32,9 +32,6 @@ jobs:
 
   generate:
 
-    permissions:
-      contents: write
-
     runs-on: ubuntu-latest
 
     timeout-minutes: 10
@@ -83,27 +80,18 @@ jobs:
 
       # Step 3: Deploy the generated files to the 'output' branch
 
-      - name: Setup Git User
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Deploy to Output Branch
 
-      - name: Setup Git Remote
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
-        run: |
-          git remote | grep origin && git remote rm origin || echo "Remote 'origin' does not exist"
-          git remote add origin https://$GH_PAT@github.com/${{ github.repository }}.git
+        uses: peaceiris/actions-gh-pages@v3
 
-      - name: Ensure Output Branch Exists
-        run: |
-          git checkout -B output
+        with:
 
-      - name: Push to Output Branch
-        run: |
-          git push origin --force output
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Git Remote
-        run: |
-          git remote | grep origin && git remote rm origin || echo "Remote 'origin' does not exist"
-          git remote add origin https://github.com/${{ github.repository }}.git
+          publish_dir: ./dist
+
+          publish_branch: output
+
+          # Optionally, you can set a custom commit message
+
+          commit_message: "Update snake animation [skip ci]"
